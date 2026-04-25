@@ -1,7 +1,12 @@
 {{ title() }}
-<a [routerLink]="'/normal-search'">Normal Search</a>
-<a [routerLink]="'/search-with-debouncing'">Search With Debouncing</a>
-<a [routerLink]="'/handling-error-gracefully'">Handling Error Gracefully</a>
+<div style="display: flex; gap: 16px; align-items: center">
+  <a [routerLink]="'/normal-search'">Normal Search</a>
+  <a [routerLink]="'/search-with-debouncing'">Search With Debouncing</a>
+  <a [routerLink]="'/handling-error-gracefully'">Handling Error Gracefully</a>
+  <a [routerLink]="'/handling-error-gracefully-with-debouncing'"
+    >Handling Error Gracefully With Debouncing</a
+  >
+</div>
 
 <p>
   <router-outlet />
