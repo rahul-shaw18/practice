@@ -11,6 +11,13 @@ export const routes: Routes = [
       import('./search-with-debouncing/search-with-debouncing').then((m) => m.SearchWithDebouncing),
   },
   {
+    path: 'handling-error-gracefully',
+    loadComponent: () =>
+      import('./handling-loading-error-gracefully/handling-loading-error-gracefully').then(
+        (m) => m.HandlingLoadingErrorGracefully,
+      ),
+  },
+  {
     path: '',
     redirectTo: 'normal-search',
     pathMatch: 'full',
