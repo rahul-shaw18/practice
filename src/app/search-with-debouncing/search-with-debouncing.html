@@ -1,0 +1,28 @@
+<input type="text" [formControl]="search" />
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>firstName</th>
+      <th>lastName</th>
+      <th>email</th>
+      <th>username</th>
+      <th>role</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (user of users(); track user.id) {
+      <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.firstName }}</td>
+        <td>{{ user.lastName }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.role }}</td>
+        <td (click)="user.status = !user.status">{{ user.status }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
